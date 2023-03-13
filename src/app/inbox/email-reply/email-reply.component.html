@@ -1,0 +1,9 @@
+<button class="ui button inverted primary" (click)="showModal = true">
+    Replay
+  </button>
+  
+<app-modal (dismiss)="showModal = false" *ngIf="showModal">
+    <div modalTitle>Replay</div>
+    <app-email-form [email]="email" (emailSubmit)="onSubmit($event)"></app-email-form>
+</app-modal>
+  
